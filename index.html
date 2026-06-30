@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR Biology Explorer</title>
+
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+}
+</style>
+
+</head>
+
+<body>
+
+<a-scene>
+
+    <!-- Sky Background -->
+    <a-sky color="#87CEEB"></a-sky>
+
+    <!-- Ground -->
+    <a-plane
+    position="0 0 -8"
+    rotation="-90 0 0"
+    width="40"
+    height="40"
+    color="#8BC34A">
+    </a-plane>
+
+
+    <!-- Camera with VR cursor -->
+    <a-entity position="0 1.6 0">
+
+        <a-camera>
+
+            <a-cursor
+            color="yellow"
+            fuse="true"
+            fuse-timeout="1200">
+            </a-cursor>
+
+        </a-camera>
+
+    </a-entity>
+
+
+
+    <!-- Main Title -->
+
+    <a-text
+    value="Explore Plant Biology"
+    position="0 4 -8"
+    align="center"
+    scale="4 4 4"
+    color="white">
+    </a-text>
+
+
+
+    <!-- LEFT : STOMATA -->
+
+    <a-entity
+    position="-5 2 -10"
+    rotation="0 25 0">
+
+    <!-- Model panel -->
+
+    <a-plane
+    width="5"
+    height="4"
+    color="#ffffff">
+
+    </a-plane>
+
+    <!-- Sketchfab embedded -->
+
+    <a-text
+    value="🌱 STOMATA"
+    position="0 2.8 0.1"
+    align="center"
+    color="green"
+    scale="2 2 2">
+    </a-text>
+
+    <a-image
+    src="https://cdn-icons-png.flaticon.com/512/2909/2909767.png"
+    width="2"
+    height="2"
+    position="0 0.5 0.1">
+
+    <a-animation
+    attribute="rotation"
+    to="0 360 0"
+    dur="8000"
+    repeat="indefinite">
+    </a-animation>
+
+    </a-image>
+
+    <a-text
+    value="Look at stomata and learn gas exchange"
+    position="0 -1.5 0.1"
+    align="center"
+    width="6"
+    color="black">
+    </a-text>
+
+    </a-entity>
+
+
+
+
+    <!-- RIGHT : PHOTOSYNTHESIS -->
+
+    <a-entity
+    position="5 2 -10"
+    rotation="0 -25 0">
+
+    <a-plane
+    width="5"
+    height="4"
+    color="#ffffff">
+    </a-plane>
+
+
+    <a-text
+    value="☀️ PHOTOSYNTHESIS"
+    position="0 2.8 0.1"
+    align="center"
+    color="orange"
+    scale="1.5 1.5 1.5">
+    </a-text>
+
+
+    <a-image
+    src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+    width="2"
+    height="2"
+    position="0 0.5 0.1">
+
+    <a-animation
+    attribute="rotation"
+    to="0 360 0"
+    dur="8000"
+    repeat="indefinite">
+    </a-animation>
+
+    </a-image>
+
+    <a-text
+    value="Observe how plants make food"
+    position="0 -1.5 0.1"
+    align="center"
+    width="6"
+    color="black">
+    </a-text>
+
+    </a-entity>
+
+
+
+    <!-- Decorative trees -->
+
+    <a-cylinder
+    position="-10 2 -15"
+    radius="0.5"
+    height="4"
+    color="#8B4513">
+    </a-cylinder>
+
+    <a-sphere
+    position="-10 5 -15"
+    radius="2"
+    color="green">
+    </a-sphere>
+
+
+    <a-cylinder
+    position="10 2 -15"
+    radius="0.5"
+    height="4"
+    color="#8B4513">
+    </a-cylinder>
+
+    <a-sphere
+    position="10 5 -15"
+    radius="2"
+    color="green">
+    </a-sphere>
+
+</a-scene>
+
+</body>
+</html>
